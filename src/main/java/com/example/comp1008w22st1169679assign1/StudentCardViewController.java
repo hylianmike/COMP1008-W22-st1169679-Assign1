@@ -8,7 +8,7 @@ import javafx.scene.image.ImageView;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class StudentCardViewController {
+public class StudentCardViewController implements Initializable {
 
     @FXML
     private Label firstNameLabel;
@@ -21,4 +21,13 @@ public class StudentCardViewController {
 
     @FXML
     private ImageView imageView;
+
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
+        Student me = new Student("Michael", "Rosanelli", 1169679);
+        firstNameLabel.setText(me.getFirstName());
+        lastNameLabel.setText(me.getLastName());
+        studentNumberLabel.setText(Integer.toString(me.getStudentNumber()));
+        imageView.setImage(me.getImage());
+    }
 }
