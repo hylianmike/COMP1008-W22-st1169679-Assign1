@@ -2,12 +2,16 @@ package com.example.comp1008w22st1169679assign1;
 
 import javafx.scene.image.Image;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Student {
 
     private String firstName;
     private String lastName;
     private int studentNumber;
     private Image image;
+    private List<String> activities;
 
     /**
      * constructor for a student object
@@ -22,6 +26,7 @@ public class Student {
         setStudentNumber(studentNumber);
         String file = String.format("img/%s-%s.png", firstName.toLowerCase(), lastName.toLowerCase());
         image = new Image(getClass().getResource(file).toExternalForm());
+        activities = new ArrayList<>();
     }
 
     /**
@@ -90,6 +95,27 @@ public class Student {
 
     public Image getImage() {
         return image;
+    }
+
+
+    /**
+     * take the parameter, and if it's not blank, then add it to the activities List
+     * @param activity
+     */
+
+    public void addActivity(String activity){
+        if (!activity.trim().isEmpty())
+            activities.add(activity);
+        else
+            throw new IllegalArgumentException("Activity cannot be empty");
+    }
+
+    /**
+     * @return activities List instance variable
+     */
+
+    public List<String> getActivities() {
+        return activities;
     }
 
     /**
