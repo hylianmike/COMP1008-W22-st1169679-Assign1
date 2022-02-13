@@ -24,6 +24,10 @@ public class Student {
         image = new Image(getClass().getResource(file).toExternalForm());
     }
 
+    /**
+     * @return the first name parameter of the object
+     */
+
     public String getFirstName() {
         return firstName;
     }
@@ -41,6 +45,10 @@ public class Student {
 
     }
 
+    /**
+     * @return the last name parameter of the object
+     */
+
     public String getLastName() {
         return lastName;
     }
@@ -57,6 +65,10 @@ public class Student {
             throw new IllegalArgumentException("You need to actually input a name");
     }
 
+    /**
+     * @return the student number parameter of the object
+     */
+
     public int getStudentNumber() {
         return studentNumber;
     }
@@ -72,9 +84,17 @@ public class Student {
             throw new IllegalArgumentException("Input a 7 digit number");
     }
 
+    /**
+     * @return the image parameter of the object
+     */
+
     public Image getImage() {
         return image;
     }
+
+    /**
+     * @return a string version of the object "'first name' 'last name': #'student number'
+     */
 
     @Override
     public String toString(){
