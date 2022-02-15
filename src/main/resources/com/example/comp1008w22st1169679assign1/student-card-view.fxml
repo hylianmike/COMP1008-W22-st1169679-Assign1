@@ -26,8 +26,8 @@
          <right>
             <GridPane BorderPane.alignment="CENTER">
               <columnConstraints>
-                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="109.0" minWidth="10.0" prefWidth="98.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="128.0" minWidth="10.0" prefWidth="102.0" />
               </columnConstraints>
               <rowConstraints>
                 <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
@@ -36,11 +36,11 @@
               </rowConstraints>
                <children>
                   <Label text="First Name" />
-                  <Label fx:id="firstNameLabel" text="Label" GridPane.columnIndex="1" />
+                  <Label fx:id="firstNameLabel" styleClass="infoLabel" text="Label" GridPane.columnIndex="1" />
                   <Label text="Last Name" GridPane.rowIndex="1" />
-                  <Label fx:id="lastNameLabel" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <Label fx:id="lastNameLabel" styleClass="infoLabel" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="1" />
                   <Label text="Student Number" GridPane.rowIndex="2" />
-                  <Label fx:id="studentNumberLabel" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                  <Label fx:id="studentNumberLabel" styleClass="infoLabel" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="2" />
                </children>
             </GridPane>
          </right>

@@ -17,3 +17,7 @@
 .activityLabel{
     -fx-padding: 20px;
 }
+
+.infoLabel{
+    -fx-font-weight: bold;
+}
