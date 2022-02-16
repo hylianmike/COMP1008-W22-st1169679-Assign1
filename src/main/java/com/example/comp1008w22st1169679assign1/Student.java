@@ -24,7 +24,7 @@ public class Student {
         setFirstName(firstName);
         setLastName(lastName);
         setStudentNumber(studentNumber);
-        String file = String.format("img/%s-%s.png", firstName.toLowerCase(), lastName.toLowerCase());
+        String file = String.format("img/%s-%s.jpg", firstName.toLowerCase(), lastName.toLowerCase());
         image = new Image(getClass().getResource(file).toExternalForm());
         activities = new ArrayList<>();
     }

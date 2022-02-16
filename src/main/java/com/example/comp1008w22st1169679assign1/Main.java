@@ -3,6 +3,7 @@ package com.example.comp1008w22st1169679assign1;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
+import javafx.scene.image.Image;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -20,6 +21,7 @@ public class Main extends Application {
         Scene scene = new Scene(fxmlLoader.load());
         // set the title to the scene
         stage.setTitle("Student Card");
+        stage.getIcons().add(new Image(getClass().getResource("img/icon.png").toExternalForm()));
         // set the stage parameter to the scene, and show it
         stage.setScene(scene);
         stage.show();
