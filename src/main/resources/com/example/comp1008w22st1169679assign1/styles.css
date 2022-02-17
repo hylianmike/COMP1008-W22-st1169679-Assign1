@@ -1,24 +1,29 @@
+/* set the whole background to a light blue */
 .root{
     -fx-background-color: #EBFAFF;
 }
-
+/* give the header larger font size, padding, a border and background color */
 .title{
     -fx-font-size: 20px;
     -fx-label-padding: 5px;
     -fx-border-color: black;
     -fx-border-radius: 5px;
-    -fx-background-color: aquamarine;
+    -fx-background-color: rgba(117, 229, 227, 0.5);
 }
-
+/* add a drop shadow on the image */
 .image{
     -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 10, 0, 0, 0);
 }
-
+/* give the label that says "Favourite Activities" some padding */
 .activityLabel{
     -fx-padding: 20px;
 }
-
+/* set the labels that change based on the Student attributes to be bigger and bold */
 .infoLabel{
     -fx-font-weight: bold;
     -fx-font-size: 15px;
+}
+/* give all labels a white dropshadow */
+.label{
+    -fx-effect: dropshadow(three-pass-box, white, 2, 0.7, 0, 0);
 }
