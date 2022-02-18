@@ -54,7 +54,7 @@
             </GridPane>
          </right>
          <bottom>
-            <HBox prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+            <HBox prefHeight="100.0" prefWidth="560.0" BorderPane.alignment="CENTER">
                <children>
                   <Label prefHeight="100.0" prefWidth="165.0" styleClass="activityLabel" text="Favourite Activities" />
                   <ListView fx:id="activitiesList" prefHeight="100.0" prefWidth="440.0" />

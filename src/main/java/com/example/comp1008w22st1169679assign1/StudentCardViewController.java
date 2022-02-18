@@ -37,6 +37,8 @@ public class StudentCardViewController implements Initializable {
         imageView.setImage(me.getImage());
         me.addActivity("Video Games (Legend of Zelda, Pokemon, etc.)");
         me.addActivity("Anime/Manga (One Piece, Assassination Classroom, etc.)");
+        me.addActivity("Art/Drawing (Pencils, Inking, Marker Colours, etc.)");
+        me.addActivity("Hanging out with friends. Especially now that the pandemic's ending soon.");
         activitiesList.setItems(FXCollections.observableList(me.getActivities()));
     }
 }
