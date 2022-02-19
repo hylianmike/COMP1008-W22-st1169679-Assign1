@@ -34,6 +34,16 @@ public class StudentCardViewController implements Initializable {
     @FXML
     private ListView<String> activitiesList;
 
+    private Student me;
+
+    /**
+     * method that is used from the add activities controller to add it to the object
+     * @param data = string to be added to the activities List
+     */
+    public void initData(String data){
+        me.addActivity(data);
+    }
+
     /**
      * When this method is called, it will change the scene
      */
@@ -45,6 +55,7 @@ public class StudentCardViewController implements Initializable {
 
         window.setScene(scene);
         window.show();
+        System.out.println(me.getActivities().size());
     }
 
     /**
@@ -53,7 +64,7 @@ public class StudentCardViewController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         // instantiate a new student object with my information
-        Student me = new Student("Michael", "Rosanelli", 1169679);
+        me = new Student("Michael", "Rosanelli", 1169679);
         // set the text of the labels based on the objects "get" methods
         firstNameLabel.setText(me.getFirstName());
         lastNameLabel.setText(me.getLastName());
