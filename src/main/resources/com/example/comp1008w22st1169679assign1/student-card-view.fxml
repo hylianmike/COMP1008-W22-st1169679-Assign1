@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ListView?>
 <?import javafx.scene.image.Image?>
@@ -54,9 +55,14 @@
             </GridPane>
          </right>
          <bottom>
-            <HBox prefHeight="100.0" prefWidth="560.0" BorderPane.alignment="CENTER">
+            <HBox prefHeight="108.0" prefWidth="560.0" BorderPane.alignment="CENTER">
                <children>
-                  <Label prefHeight="100.0" prefWidth="165.0" styleClass="activityLabel" text="Favourite Activities" />
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="9.0" prefHeight="57.0" prefWidth="142.0" styleClass="activityLabel" text="Favourite Activities" />
+                        <Button layoutX="54.0" layoutY="57.0" mnemonicParsing="false" onAction="#changeScene" text="Button" />
+                     </children>
+                  </AnchorPane>
                   <ListView fx:id="activitiesList" prefHeight="100.0" prefWidth="440.0" />
                </children>
             </HBox>
