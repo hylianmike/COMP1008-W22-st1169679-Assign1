@@ -27,3 +27,9 @@
 .label{
     -fx-effect: dropshadow(three-pass-box, white, 2, 0.7, 0, 0);
 }
+.button{
+    -fx-text-fill: white;
+    -fx-background-color: #13428c;
+    -fx-border-color: white;
+    -fx-border-radius: 2;
+}
