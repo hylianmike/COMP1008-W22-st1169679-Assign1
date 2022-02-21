@@ -27,6 +27,24 @@ public class AddActivitiesViewController implements Initializable {
     @FXML
     private Label topLabel;
 
+    private static Student student;
+
+    /**
+     * method that sets the student variable
+     * @param student
+     */
+    public void setStudent(Student student) {
+        AddActivitiesViewController.student = student;
+    }
+
+    /**
+     * method that returns the student variable (needed for passing info between scenes)
+     * @return
+     */
+    public static Student getStudent() {
+        return student;
+    }
+
     /**
      * When this method is called, it will change the scene
      */
@@ -52,6 +70,7 @@ public class AddActivitiesViewController implements Initializable {
 
         StudentCardViewController controller = loader.getController();
         controller.initData(textBox.getText());
+        controller.setStudent(student);
 
         Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
 
