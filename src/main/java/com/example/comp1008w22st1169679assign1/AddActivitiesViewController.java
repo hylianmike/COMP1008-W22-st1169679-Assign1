@@ -27,11 +27,12 @@ public class AddActivitiesViewController implements Initializable {
     @FXML
     private Label topLabel;
 
+    // private static Student variable
     private static Student student;
 
     /**
      * method that sets the student variable
-     * @param student
+     * @param student set the static private instance variable to this parameter
      */
     public void setStudent(Student student) {
         AddActivitiesViewController.student = student;

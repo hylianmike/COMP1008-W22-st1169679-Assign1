@@ -1,5 +1,7 @@
 package com.example.comp1008w22st1169679assign1;
 
+import javafx.animation.RotateTransition;
+import javafx.animation.ScaleTransition;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -13,6 +15,7 @@ import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
 import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
+import javafx.util.Duration;
 
 import java.io.IOException;
 import java.net.URL;
@@ -35,6 +38,7 @@ public class StudentCardViewController implements Initializable {
     @FXML
     private ListView<String> activitiesList;
 
+    // private Student variable
     private Student user;
 
     // flag to know when to create a new student object
@@ -42,7 +46,7 @@ public class StudentCardViewController implements Initializable {
 
     /**
      * method that sets the student object to the parameter
-     * @param student
+     * @param student sets the student object to this parameter
      */
     public void setStudent(Student student) { this.user = student; }
 
@@ -102,6 +106,16 @@ public class StudentCardViewController implements Initializable {
         imageView.setImage(user.getImage());
         // set the ListView to the activities array
         activitiesList.setItems(FXCollections.observableList(user.getActivities()));
-
+        // create and configure transition to increase the size of the image
+        ScaleTransition scale = new ScaleTransition(Duration.seconds(1), imageView);
+        scale.setToX(4);
+        scale.setToY(4);
+        // create and configure transition to rotate the image
+        RotateTransition rotate = new RotateTransition(Duration.seconds(1), imageView);
+        rotate.setFromAngle(0);
+        rotate.setToAngle(1080);
+        // play the transitions
+        scale.play();
+        rotate.play();
     }
 }
